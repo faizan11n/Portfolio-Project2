@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faizan Naikwadi | DevOps Engineer</title>
+<meta name="description" content="Portfolio of Faizan Naikwadi, DevOps engineer: CI/CD, Kubernetes, Terraform, Ansible and Docker projects.">
+<style>
+  :root { --bg:#0b0e14; --panel:#131824; --line:#232b3b; --text:#e6e9f0; --mute:#8f9ab0; --accent:#4cc9f0; --accent2:#7ee787; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f6f7fb; --panel:#ffffff; --line:#e1e5ee; --text:#161a23; --mute:#5b667a; --accent:#0a7ea4; --accent2:#1a7f37; }
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
+
+  nav { position:sticky; top:0; z-index:10; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  nav .wrap { display:flex; justify-content:space-between; align-items:center; height:56px; }
+  nav .logo { font-weight:800; letter-spacing:.02em; color:var(--text); }
+  nav .logo span { color:var(--accent); }
+  nav ul { display:flex; gap:20px; list-style:none; font-size:14px; }
+  nav ul a { color:var(--mute); } nav ul a:hover { color:var(--text); text-decoration:none; }
+
+  .hero { padding:84px 0 56px; }
+  .hello { font-family:ui-monospace,Consolas,monospace; color:var(--accent2); font-size:14px; }
+  h1 { font-size:clamp(34px,6vw,56px); line-height:1.1; margin:10px 0 14px; }
+  h1 .role { color:var(--accent); display:block; }
+  .lead { color:var(--mute); max-width:620px; font-size:18px; }
+  .cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+  .btn { padding:11px 20px; border-radius:10px; font-weight:600; font-size:15px; border:1px solid var(--line); color:var(--text); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:#06121a; }
+  .btn:hover { text-decoration:none; transform:translateY(-1px); }
+
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:44px; }
+  .stat { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .stat b { display:block; font-size:26px; }
+  .stat span { color:var(--mute); font-size:13px; }
+
+  section { padding:56px 0 8px; }
+  h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--mute); margin-bottom:18px; }
+  .about p { color:var(--mute); max-width:720px; margin-bottom:12px; }
+
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:14px; }
+  .skillgroup { margin-bottom:18px; }
+  .skillgroup h3 { font-size:14px; color:var(--mute); font-weight:600; margin-bottom:8px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; display:flex; flex-direction:column; transition:border-color .15s; }
+  .card:hover { border-color:var(--accent); }
+  .card h3 { font-size:17px; margin-bottom:6px; }
+  .card p { color:var(--mute); font-size:14px; flex:1; }
+  .card .tags { display:flex; flex-wrap:wrap; gap:6px; margin:12px 0; }
+  .card .tags span { font-size:12px; color:var(--accent); border:1px solid var(--line); border-radius:6px; padding:2px 8px; }
+  .card a.link { font-size:14px; font-weight:600; }
+
+  .flow { display:flex; flex-wrap:wrap; gap:8px; align-items:center; background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .flow .s { border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-size:14px; }
+  .flow .a { color:var(--mute); }
+
+  .contact .box { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:24px; }
+  .contact ul { list-style:none; display:grid; gap:8px; }
+  footer { margin-top:64px; border-top:1px solid var(--line); padding:24px 0; color:var(--mute); font-size:13px; text-align:center; }
+  @media (max-width:600px){ nav ul { gap:12px; font-size:13px; } .hero { padding-top:56px; } }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">faizan<span>.dev</span></a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="hello">$ whoami</div>
+  <h1>Faizan Naikwadi <span class="role">DevOps Engineer</span></h1>
+  <p class="lead">I build and automate delivery pipelines: containers, CI/CD, Kubernetes and infrastructure as code. Everything below is something I built and ran myself.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn" id="gh-link" href="https://github.com/faizan11n" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" id="hub-link" href="https://hub.docker.com/u/faizan1112002" target="_blank" rel="noopener">Docker Hub</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b id="st-repos">-</b><span>public repos (live from GitHub)</span></div>
+    <div class="stat"><b id="st-followers">-</b><span>followers</span></div>
+    <div class="stat"><b>6</b><span>DevOps tools in daily practice</span></div>
+    <div class="stat"><b>40+</b><span>hands-on projects</span></div>
+  </div>
+</div></header>
+
+<section class="about" id="about"><div class="wrap">
+  <h2>About</h2>
+  <p>I am a fresher DevOps engineer who learns by building. I set up my own EC2 servers, wrote Dockerfiles for many kinds of apps, built a Jenkins pipeline that ships containers to Docker Hub, and provisioned servers with Terraform and configured them with Ansible.</p>
+  <p>I like fixing real problems: when my Jenkins container said <em>docker: not found</em>, I traced it to the missing Docker CLI behind a mounted socket, and fixed it. I write down what broke and why, so the next build is calmer.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skillgroup"><h3>CI/CD and Containers</h3><div class="chips">
+    <span class="chip">Jenkins</span><span class="chip">Docker</span><span class="chip">Docker Compose</span><span class="chip">Docker Hub</span><span class="chip">AWS ECR</span><span class="chip">GitHub webhooks</span>
+  </div></div>
+  <div class="skillgroup"><h3>Orchestration</h3><div class="chips">
+    <span class="chip">Kubernetes (k3s)</span><span class="chip">Deployments and Services</span><span class="chip">Ingress</span><span class="chip">Secrets and ConfigMaps</span><span class="chip">PVC and StatefulSets</span><span class="chip">HPA</span><span class="chip">RBAC</span>
+  </div></div>
+  <div class="skillgroup"><h3>Infrastructure as Code</h3><div class="chips">
+    <span class="chip">Terraform</span><span class="chip">Ansible</span><span class="chip">AWS EC2</span><span class="chip">IAM</span><span class="chip">Security Groups</span>
+  </div></div>
+  <div class="skillgroup"><h3>Foundations</h3><div class="chips">
+    <span class="chip">Linux</span><span class="chip">Git and GitHub</span><span class="chip">Python and boto3</span><span class="chip">Bash</span><span class="chip">nginx</span><span class="chip">MySQL and PostgreSQL</span>
+  </div></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>CI/CD Pipeline with Jenkins</h3>
+      <p>Push to GitHub triggers Jenkins, which builds the image, pushes it to Docker Hub and redeploys the app with Compose.</p>
+      <div class="tags"><span>Jenkins</span><span>Docker</span><span>GitHub</span></div>
+      <a class="link" href="https://github.com/faizan11n/RESUME-PROJECTS" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Terraform + Ansible Provisioning</h3>
+      <p>One command creates an EC2 server, then Ansible installs Docker and deploys the app on it. Rebuildable from scratch.</p>
+      <div class="tags"><span>Terraform</span><span>Ansible</span><span>AWS</span></div>
+      <a class="link" href="https://github.com/faizan11n/RESUME-PROJECTS" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Kubernetes Practice Projects</h3>
+      <p>Deployments, probes, rolling updates, HPA, Ingress, StatefulSets, Jobs, CronJobs and RBAC on a k3s cluster.</p>
+      <div class="tags"><span>Kubernetes</span><span>k3s</span><span>YAML</span></div>
+      <a class="link" href="https://github.com/faizan11n/Kubernetes-Projects" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Terraform Projects</h3>
+      <p>Provider setup, variables and tfvars, remote-exec provisioning and for_each to create several servers at once.</p>
+      <div class="tags"><span>Terraform</span><span>AWS</span><span>IaC</span></div>
+      <a class="link" href="https://github.com/faizan11n/Terraform-Projects" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Ansible Projects</h3>
+      <p>Inventories, multi-play playbooks, tags, conditionals and block/rescue/always for error handling.</p>
+      <div class="tags"><span>Ansible</span><span>YAML</span><span>Automation</span></div>
+      <a class="link" href="https://github.com/faizan11n/Ansible-Projects" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Jenkins Pipelines</h3>
+      <p>Declarative pipelines from SCM, environment and post blocks, artifact archiving and automatic builds through a GitHub webhook.</p>
+      <div class="tags"><span>Jenkins</span><span>Pipeline</span><span>Webhook</span></div>
+      <a class="link" href="https://github.com/faizan11n/Jenkins-Project-" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+    <article class="card">
+      <h3>Golden Bun: Full-Stack App</h3>
+      <p>Food ordering site with nginx, a Flask API and MySQL, plus a live dashboard page showing build version and health.</p>
+      <div class="tags"><span>Docker Compose</span><span>Flask</span><span>MySQL</span></div>
+      <a class="link" href="https://github.com/faizan11n/Capstone-Project" target="_blank" rel="noopener">View code &rarr;</a>
+    </article>
+  </div>
+</div></section>
+
+<section id="pipeline"><div class="wrap">
+  <h2>How I ship</h2>
+  <div class="flow">
+    <span class="s">git push</span><span class="a">&rarr;</span>
+    <span class="s">Jenkins</span><span class="a">&rarr;</span>
+    <span class="s">Docker image</span><span class="a">&rarr;</span>
+    <span class="s">Docker Hub</span><span class="a">&rarr;</span>
+    <span class="s">Kubernetes</span><span class="a">&rarr;</span>
+    <span class="s">Live</span>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <div class="box">
+    <p style="margin-bottom:12px">Open to DevOps and cloud roles. The best way to reach me:</p>
+    <ul>
+      <li>GitHub: <a href="https://github.com/faizan11n" target="_blank" rel="noopener">github.com/faizan11n</a></li>
+      <li>Docker Hub: <a href="https://hub.docker.com/u/faizan1112002" target="_blank" rel="noopener">faizan1112002</a></li>
+      <li>LinkedIn: <a id="linkedin" href="https://www.linkedin.com/in/faizan-naikwadi" target="_blank" rel="noopener">linkedin.com/in/faizan-naikwadi</a></li>
+      <li>Email: <a id="email" href="mailto:faizannaikwadi03@gmail.com">faizannaikwadi03@gmail.com</a></li>
+    </ul>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Built by hand with HTML, served by nginx in a Docker container.</div></footer>
+
+<script>
+// Live numbers from the public GitHub API. If the request fails, the page still works.
+fetch("https://api.github.com/users/faizan11n")
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    document.getElementById("st-repos").textContent = d.public_repos;
+    document.getElementById("st-followers").textContent = d.followers;
+  })
+  .catch(() => {
+    document.getElementById("st-repos").textContent = "20+";
+    document.getElementById("st-followers").textContent = "-";
+  });
+</script>
+</body>
+</html>
